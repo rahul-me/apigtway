@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <profiles>
+    <profile>
+      <repositories>
+        <repository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>libs-release</name>
+          <url>https://build-artifactory.eng.vmware.com/libs-release</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>libs-snapshot</name>
+          <url>https://build-artifactory.eng.vmware.com/libs-snapshot</url>
+        </repository>
+        <repository>
+          <id>build-artifactory</id>
+          <name>VMware Artifactory</name>
+          <url>http://build-artifactory.eng.vmware.com/artifactory/maven/</url>
+        </repository>
+        <repository>
+            <id>it-data-analytics-team-maven-local</id>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <url>http://build-artifactory.eng.vmware.com/it-data-analytics-team-maven-local/</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>plugins-release</name>
+          <url>https://build-artifactory.eng.vmware.com/plugins-release</url>
+        </pluginRepository>
+        <pluginRepository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>plugins-release</name>
+          <url>https://build-artifactory.eng.vmware.com/plugins-release</url>
+        </pluginRepository>
+      </pluginRepositories>
+      <id>artifactory</id>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>artifactory</activeProfile>
+  </activeProfiles>
+</settings>
